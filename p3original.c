@@ -1,23 +1,20 @@
 #include<stdio.h>
 int input_number()
 {
-  int x;
+  int n;
   printf("enter a number:");
-  scanf("%d",&x);
-  return x;
+  scanf("%d",&n);
+  return n;
 }
 int is_prime(int n)
 {
-  int prime,i;
-  for(i=1;i<n/2;i++)
+  int prime=0;
+  for(int i=2;i<n/2;i++)
   {
     if(n%i==0)
     {
-      return 1;
-    }
-    else
-    {
-     return 0;
+      prime=1;
+      break;
     }
   }
   return prime;
