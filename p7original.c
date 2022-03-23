@@ -1,34 +1,34 @@
 #include<stdio.h>
 #include<math.h>
-
-typedef struct _point 
-{
-float x,y;
-}Point;
-
-struct _line
-{
-Point p1,p2;
-float distance;
-};
-typedef struct _line Line;
-
-Point input_point()
-{
-  Point f;
-  printf("enter the coordinates as x and y as in (x,y):\n");
-  scanf("%f%f",&f.x,&f.y);
-  return f;
+typedef struct pointpoint{
+    float x,y;
+}point;
+typedef struct line{
+    point p1,p2;
+    float distance;
+}line;
+point input_point(){
+    point z;
+    printf("Enter the co-ordinates of the points\n");
+    scanf("%f %f",&z.x,&z.y);
+    return z;
 }
-
-Line input_line()
-{
-  Line s;
-  float g,h;
-  s.p1=input_point();
-  s.p2=input_point();
-  g=(s.p1.x - s.p2.x) * (s.p1.x - s.p2.x);
-  h=(s.p1.y - s.p2.y) * (s.p1.y - s.p2.y);
-  s.distance=sqrt(g + h);
-  return s;
+line input_line(){
+        line l;
+        l.p1=input_point();
+        l.p2=input_point();
+        return l;
+}
+void find_lenght(line *l){
+    l->distance=sqrt(((l->p1.x - l->p2.x)*(l->p1.x - l->p2.x))+((l->p1.y - l->p2.y)*(l->p1.y - l->p2.y)));
+}
+void output(line *l){
+    printf("The length of the line is %f",l->distance);
+}
+int main(){
+    line l;
+    l=input_line();
+    find_lenght(&l);
+    output(&l);
+    return 0;
 }

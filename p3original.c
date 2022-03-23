@@ -36,4 +36,4 @@ int main()
   prime=is_prime(n);
   output(n,prime);
   return 0;
-}
+  }

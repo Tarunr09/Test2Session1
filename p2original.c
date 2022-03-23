@@ -50,7 +50,7 @@ int is_triangle(float *x1, float *y1,float *x2, float *y2,float *x3, float *y3){
     a=find_distance(*x1,*y1,*x2,*y2);
     b=find_distance(*x2,*y2,*x3,*y3);
     c=find_distance(*x3,*y3,*x1,*x2);
-    if((a+b)>c&&(b+c)>a&&(c+a)>b){
+    if((a+b)>c && (b+c)>a && (c+a)>b){
         istriangle=1;
     }
     return istriangle;
@@ -70,4 +70,4 @@ int main(){
     istriangle=is_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
     output( x1,y1,x2,y2,x3,y3,istriangle);
     return 0;
-}
+  }
