@@ -24,13 +24,13 @@ void output(int n, int a[n]){
     }
 }
 int main(){
-    int n;
-    n=input_array_size();
-    int a[101]={0};
+  int n;
+  n=input_array_size();
+  int a[101]={0};
     
-    erotosthenes_sieve(n,a);
-    output(n,a);
-    return 0;
+  erotosthenes_sieve(n,a);
+  output(n,a);
+  return 0;
 }
 
 

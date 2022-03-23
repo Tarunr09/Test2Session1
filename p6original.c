@@ -42,4 +42,4 @@ int main()
   n=str_index(a,b);
   output(a,b,n);
   return 0;
-}
+  }
